@@ -1,23 +1,72 @@
 backend:
   name: github
-  repo: lutfiandri/lutfiandri.github.io
-  branch: main # Branch to update (optional; defaults to master)
+  repo: lutfiandri/batur-bertutur
+  branch: main
 media_folder: /public/uploads
 public_folder: /uploads
 collections:
-  - name: 'portfolio'
-    label: 'Portfolio'
+  - name: wisata
+    label: Wisata
     create: true
-    folder: 'posts/portfolio'
+    folder: _posts/wisata
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'desc', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Tags (separate by comma)', name: 'tags', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Files'
-        name: 'files'
-        widget: 'list'
+      - label: Judul
+        name: title
+        widget: string
+      - label: Deskripsi
+        name: desc
+        widget: string
+      - label: Gambar Thumbnail
+        name: thumbnail
+        widget: image
+      - label: Tanggal Publish
+        name: date
+        widget: datetime
+      - label: Tag (pisahkan dengan koma)
+        name: tags
+        widget: string
+        hint: 'Contoh: KKN-PPM UGM, Wisata'
+      - label: Isi Halaman
+        name: body
+        widget: markdown
+      - label: Files
+        name: files
+        widget: list
         fields:
-          - { label: 'File', name: 'file', widget: 'file' }
+          - label: File
+            name: file
+            widget: file
+
+  - name: blog
+    label: Blog
+    create: true
+    folder: _posts/blog
+    slug: '{{slug}}'
+    fields:
+      - label: Judul
+        name: title
+        widget: string
+      - label: Deskripsi
+        name: desc
+        widget: string
+      - label: Gambar Thumbnail
+        name: thumbnail
+        widget: image
+      - label: Tanggal Publish
+        name: date
+        widget: datetime
+      - label: Tag (pisahkan dengan koma)
+        name: tags
+        widget: string
+        hint: 'Contoh: KKN-PPM UGM, Wisata'
+      - label: Isi Halaman
+        name: body
+        widget: markdown
+      - label: Files
+        name: files
+        widget: list
+        fields:
+          - label: File
+            name: file
+            widget: file
