@@ -7,9 +7,8 @@ public_folder: /uploads
 collections:
   - name: home
     label: Home
-    create: true
+    create: false
     folder: _posts/home
-    slug: '{{slug}}'
     fields:
       - name: Deskripsi
         label: desc
