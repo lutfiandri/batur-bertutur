@@ -7,14 +7,18 @@ public_folder: /uploads
 collections:
   - name: home
     label: Home
-    create: false
+    create: true
     folder: _posts/home
+    slug: '{{slug}}'
     fields:
-      - name: Deskripsi
-        label: desc
+      - name: title
+        label: Judul
+        widget: string
+      - name: desc
+        label: Deskripsi
         widget: markdown
-      - name: Galeri
-        label: gallery
+      - name: gallery
+        label: Galeri
         widget: list
         fields:
           - label: Gambar
