@@ -24,7 +24,7 @@ function DesktopNavbar({ show = false }) {
           <div className="flex items-baseline">
             <Link href="/">
               <div role="button" className="py-4 text-lg font-bold text-blue">
-                Lutfi Andriyanto
+                Batur Bertutur
               </div>
             </Link>
             <div className="w-12"></div>

@@ -3,8 +3,8 @@ import ErrorLayout from 'components/layout/ErrorLayout';
 function Custom404() {
   return (
     <ErrorLayout
-      title="Not Found"
-      subTitle="Sorry, there's nothing in this url."
+      title="Halaman tidak ditemukan"
+      subTitle="Maaf, tidak ada halaman apapun di url ini"
     />
   );
 }

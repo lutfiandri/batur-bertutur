@@ -1,11 +1,15 @@
 const ROUTES = [
   {
-    name: 'Article',
-    url: '/article',
+    name: 'Wisata',
+    url: '/wisata',
   },
   {
-    name: 'Portfolio',
-    url: '/portfolio',
+    name: 'Blog',
+    url: '/blog',
+  },
+  {
+    name: 'Peta',
+    url: '/peta',
   },
 ];
 

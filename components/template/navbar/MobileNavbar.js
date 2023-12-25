@@ -22,7 +22,7 @@ function MobileNavbar({ show = false }) {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div role="button" className="py-4 text-lg font-bold text-blue">
-              Lutfi Andriyanto
+              Batur Bertutur
             </div>
           </Link>
           <div

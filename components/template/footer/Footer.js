@@ -6,41 +6,31 @@ import Copyright from './Copyright';
 const LINKS = [
   {
     external: false,
-    name: 'Article',
-    url: '/article',
+    name: 'Wisata',
+    url: '/wisata',
   },
   {
     external: false,
-    name: 'Portfolio',
-    url: '/portfolio',
+    name: 'Blog',
+    url: '/blog',
   },
   {
-    external: true,
-    name: 'Github',
-    url: 'https://github.com/lutfiandri',
+    external: false,
+    name: 'Peta',
+    url: '/peta',
   },
 ];
 
 const CONTACTS = [
   {
     external: true,
-    name: 'Email',
+    name: 'Email Kecamatan Batur',
     url: 'mailto:lutfiandri232@gmail.com',
   },
   {
     external: true,
-    name: 'LinkedIn',
-    url: 'https://linkedin.com/in/lutfiandriyanto',
-  },
-  {
-    external: true,
-    name: 'WhatsApp',
-    url: 'https://wa.me/6285229490001',
-  },
-  {
-    external: true,
-    name: 'Instagram',
-    url: 'https://instagram.com/lutfi_andriyanto',
+    name: 'Email Pembuat Website',
+    url: 'mailto:lutfiandri232@gmail.com',
   },
 ];
 
@@ -58,9 +48,11 @@ function Footer() {
                 onClick={() => router?.push('/')}
                 className="text-lg font-bold text-blue"
               >
-                Lutfi Andriyanto
+                Batur Bertutur
               </div>
-              <div className="text-sm font-semibold">Webdev Enthusiast</div>
+              <div className="text-sm font-semibold">
+                Kec. Batur, Kab. Banjarnegara, Jawa Tengah
+              </div>
             </div>
             <div className="hidden md:block">
               <Copyright />

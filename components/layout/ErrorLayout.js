@@ -12,7 +12,7 @@ function ErrorLayout({ seoTitle, title, subTitle }) {
           <div className="h-8"></div>
           <Link href="/">
             <div role="button" className="text-lg font-bold">
-              Back to Home
+              Kembali ke menu utama
             </div>
           </Link>
         </div>

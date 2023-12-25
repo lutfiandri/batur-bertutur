@@ -24,8 +24,8 @@ module.exports = {
     extend: {
       minHeight: {
         'screen-no-header': 'calc(100vh - 64px)',
-        'screen-no-footer': 'calc(100vh - 224px)',
-        'screen-no-header-footer': 'calc(100vh - 64px - 224px)',
+        'screen-no-footer': 'calc(100vh - 196px)',
+        'screen-no-header-footer': 'calc(100vh - 64px - 196px)',
       },
       transitionTimingFunction: {
         'bounce-out': 'cubic-bezier(.56,-0.04,.22,1.47)',
