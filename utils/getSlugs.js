@@ -9,9 +9,9 @@ function getSlugs(...paths) {
 }
 
 export function getPortfolioSlugs() {
-  return getSlugs('posts', 'portfolio');
+  return getSlugs('_posts', 'portfolio');
 }
 
 export function getArticleSlugs() {
-  return getSlugs('posts', 'article');
+  return getSlugs('_posts', 'article');
 }

@@ -13,8 +13,8 @@ function getMarkdownData(...paths) {
 }
 
 export function getArticleData(slug) {
-  return getMarkdownData('posts', 'article', slug + '.md');
+  return getMarkdownData('_posts', 'article', slug + '.md');
 }
 export function getPortfolioData(slug) {
-  return getMarkdownData('posts', 'portfolio', slug + '.md');
+  return getMarkdownData('_posts', 'portfolio', slug + '.md');
 }
