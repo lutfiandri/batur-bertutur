@@ -62,8 +62,8 @@ function Footer() {
           {/* right */}
           <div className="flex">
             <div className="flex space-x-16 text-sm">
-              <VerticalMenu title="Links" items={LINKS} />
-              <VerticalMenu title="Contact" items={CONTACTS} />
+              <VerticalMenu title="Jelajahi" items={LINKS} />
+              <VerticalMenu title="Kontak" items={CONTACTS} />
             </div>
           </div>
 
