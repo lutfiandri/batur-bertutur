@@ -5,6 +5,23 @@ backend:
 media_folder: /public/uploads
 public_folder: /uploads
 collections:
+  - name: home
+    label: Home
+    create: true
+    folder: _posts/home
+    slug: '{{slug}}'
+    fields:
+      - name: Deskripsi
+        label: desc
+        widget: markdown
+      - name: Galeri
+        label: gallery
+        widget: list
+        fields:
+          - label: Gambar
+            name: image
+            widget: image
+
   - name: wisata
     label: Wisata
     create: true
