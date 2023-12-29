@@ -2,8 +2,14 @@ import Container from 'components/element/Container';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import Image from 'next/image';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import PostMarkdownComponents from 'components/template/post/PostMarkdownComponents';
+import { getHomeData } from 'utils/getMarkdownData';
+import PostMarkdown from 'components/template/post/PostMarkdown';
+import PostContainerTemplate from 'components/template/post/PostContainerTemplate';
+import HomePostContainerTemplate from 'components/template/home/HomePostContainerTemplate';
 
-export default function Home() {
+export default function Home({ home }) {
+  console.log('home', home);
   return (
     <DefaultLayout>
       <Container>
@@ -23,10 +29,43 @@ export default function Home() {
             <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
               Kecamatan Batur, Banjarnegara
             </h1>
-            <h2 className="text-lg font-bold">Batur Bertutur - KKN-PPM UGM</h2>
+            <h2 className="text-lg font-bold">
+              KKN-PPM UGM Periode IV 2023/2024
+            </h2>
           </div>
+        </div>
+      </Container>
+
+      {/* Mengenal Kecamatan Batur */}
+      <Container>
+        <div className="my-16 flex flex-col">
+          <PostMarkdownComponents.h1>
+            Mengenal Kecamatan Batur
+          </PostMarkdownComponents.h1>
+          <PostMarkdown>{home?.body}</PostMarkdown>
+        </div>
+      </Container>
+
+      {/* Mengenal Kecamatan Batur */}
+      <Container>
+        <div className="my-16 flex flex-col">
+          <HomePostContainerTemplate
+            title="Wisata Batur"
+            linkText="Lihat semua wisata &rarr;"
+            linkUrl="/wisata"
+          ></HomePostContainerTemplate>
         </div>
       </Container>
     </DefaultLayout>
   );
+}
+
+export async function getStaticProps({ params }) {
+  const home = getHomeData();
+
+  return {
+    props: {
+      home: home,
+    },
+  };
 }

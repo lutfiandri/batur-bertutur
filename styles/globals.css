@@ -30,7 +30,7 @@ body {
 }
 
 /* others */
-.video-wrapper {
+.iframe-wrapper {
   /* @apply my-4 mx-auto max-w-[600px]; */
   position: relative;
   padding-bottom: 56.25%;
@@ -39,7 +39,7 @@ body {
   height: 0;
 }
 
-.video-wrapper iframe {
+.iframe-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;

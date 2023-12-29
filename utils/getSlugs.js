@@ -15,3 +15,11 @@ export function getPortfolioSlugs() {
 export function getArticleSlugs() {
   return getSlugs('_posts', 'article');
 }
+
+export function getWisataSlugs() {
+  return getSlugs('_posts', 'wisata');
+}
+
+export function getBlogSlugs() {
+  return getSlugs('_posts', 'blog');
+}

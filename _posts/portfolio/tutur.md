@@ -24,7 +24,7 @@ Tutur mendapatan juara 1 di INTENTION IFEST UNPAD 2022.
 
 # Presentation
 
-<div class="video-wrapper">
+<div class="iframe-wrapper">
   <iframe src="https://www.youtube.com/embed/W5K7v6cJqBY?si=yuQUhb-5Wp83rI65&amp;start=3630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 

@@ -1,5 +1,3 @@
-// import Masonry from 'react-smart-masonry';
-
 import dynamic from 'next/dynamic';
 const Masonry = dynamic(() => import('react-smart-masonry'), { ssr: false });
 
@@ -8,13 +6,12 @@ function PostContainerTemplate({
   subtitle = 'Subtitle',
   children,
 }) {
-  // console.log(children);
   return (
     <div className="mx-8 lgp:mx-0">
       <div className="-mx-8 mb-8 flex items-baseline justify-between lgp:mx-0">
         <h1 className="text-4xl font-extrabold">{title}</h1>
         <p className="hidden text-lg font-semibold text-gray sm:block">
-          {children.length} {subtitle}
+          {children?.length} {subtitle}
         </p>
       </div>
       <div className="-mx-8">

@@ -8,13 +8,14 @@ collections:
   - name: home
     label: Home
     create: false
+    delete: false
     folder: _posts/home
     slug: '{{slug}}'
     fields:
       - name: title
         label: Judul
         widget: string
-      - name: desc
+      - name: body
         label: Deskripsi
         widget: markdown
       - name: gallery
@@ -37,6 +38,9 @@ collections:
       - label: Deskripsi
         name: desc
         widget: string
+      - label: Tampilkan di halaman utama
+        name: featured
+        widget: boolean
       - label: Gambar Thumbnail
         name: thumbnail
         widget: image
