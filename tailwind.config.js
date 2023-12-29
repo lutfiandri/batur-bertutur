@@ -11,6 +11,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'lg-masonry': '800px',
       lgp: 'calc(1024px + 4rem)',
       ...defaultTheme.screens,
     },

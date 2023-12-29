@@ -10,15 +10,11 @@ function Wisata({ wisatas }) {
     <DefaultLayout title="Wisata - Batur Bertutur">
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <PostsTemplate title="Wisata Batur" subtitle="wisata">
-            {wisatas.map((wisata) => (
-              <PostPreviewCard
-                key={wisata.meta.slug}
-                meta={wisata.meta}
-                baseUrl="wisata"
-              />
-            ))}
-          </PostsTemplate>
+          <PostsTemplate
+            title="Wisata Batur"
+            subtitle="wisata"
+            contents={wisatas}
+          />
         </div>
       </Container>
     </DefaultLayout>

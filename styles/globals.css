@@ -4,6 +4,7 @@
 
 * {
   /* @apply transition-all duration-100 ease-bounce-out delay-[0ms]; */
+  @apply focus:outline-blue;
 }
 
 ::-webkit-scrollbar {
