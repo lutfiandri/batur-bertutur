@@ -1,17 +1,18 @@
 import dynamic from 'next/dynamic';
 import PostMarkdownComponents from '../post/PostMarkdownComponents';
 import Link from 'next/link';
+import PostPreviewCard from 'components/element/card/PostPreviewCard';
 const Masonry = dynamic(() => import('react-smart-masonry'), { ssr: false });
 
 function HomePostContainerTemplate({
   title = 'Title',
   linkUrl = '#',
   linkText = 'Lihat semua ....',
-  children,
+  contents = [],
 }) {
   return (
     <div className="mx-8 lgp:mx-0">
-      <div className="-mx-8 mb-8 flex flex-col items-baseline justify-between lgp:mx-0 lgp:flex-row">
+      <div className="-mx-8 mb-8 flex flex-col items-baseline justify-between lgp:mx-0 sm:flex-row">
         <PostMarkdownComponents.h1>{title}</PostMarkdownComponents.h1>
         <Link href={linkUrl}>
           <p
@@ -29,7 +30,13 @@ function HomePostContainerTemplate({
           breakpoints={{ default: 0, lg: 800 }}
           columns={{ default: 1, lg: 2 }}
         >
-          {children}
+          {contents.map((wisata) => (
+            <PostPreviewCard
+              key={wisata.meta.slug}
+              meta={wisata.meta}
+              baseUrl="wisata"
+            />
+          ))}
         </Masonry>
       </div>
     </div>
