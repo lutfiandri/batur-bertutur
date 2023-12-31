@@ -3,12 +3,13 @@ import DefaultLayout from 'components/layout/DefaultLayout';
 import Image from 'next/image';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import PostMarkdownComponents from 'components/template/post/PostMarkdownComponents';
-import { getHomeData } from 'utils/getMarkdownData';
+import { getHomeData, getWisataData } from 'utils/getMarkdownData';
 import PostMarkdown from 'components/template/post/PostMarkdown';
 import PostContainerTemplate from 'components/template/post/PostContainerTemplate';
 import HomePostContainerTemplate from 'components/template/home/HomePostContainerTemplate';
+import { getWisataSlugs } from 'utils/getSlugs';
 
-export default function Home({ home }) {
+export default function Home({ home, wisatas }) {
   console.log('home', home);
   return (
     <DefaultLayout>
@@ -53,6 +54,7 @@ export default function Home({ home }) {
             title="Wisata Batur"
             linkText="Lihat semua wisata &rarr;"
             linkUrl="/wisata"
+            contents={wisatas}
           ></HomePostContainerTemplate>
         </div>
       </Container>
@@ -63,9 +65,13 @@ export default function Home({ home }) {
 export async function getStaticProps({ params }) {
   const home = getHomeData();
 
+  const slugs = getWisataSlugs();
+  const wisatas = slugs.map((slug) => getWisataData(slug));
+
   return {
     props: {
       home: home,
+      wisatas: wisatas,
     },
   };
 }
