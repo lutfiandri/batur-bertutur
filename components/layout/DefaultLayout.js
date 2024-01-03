@@ -1,8 +1,9 @@
+import RenderIf from 'components/element/RenderIf';
 import Footer from 'components/template/footer/Footer';
 import Navbar from 'components/template/navbar/Navbar';
 import Head from 'next/head';
 
-function DefaultLayout({ children, title = 'Batur Bertutur' }) {
+function DefaultLayout({ children, title = 'Batur Bertutur', noFooter }) {
   return (
     <>
       <Head>
@@ -10,7 +11,9 @@ function DefaultLayout({ children, title = 'Batur Bertutur' }) {
       </Head>
       <Navbar />
       <main>{children}</main>
-      <Footer />
+      <RenderIf when={!noFooter}>
+        <Footer />
+      </RenderIf>
     </>
   );
 }
