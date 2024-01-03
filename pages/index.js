@@ -3,17 +3,21 @@ import DefaultLayout from 'components/layout/DefaultLayout';
 import Image from 'next/image';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import PostMarkdownComponents from 'components/template/post/PostMarkdownComponents';
-import { getHomeData, getWisataData } from 'utils/getMarkdownData';
+import { getBlogData, getHomeData, getWisataData } from 'utils/getMarkdownData';
 import PostMarkdown from 'components/template/post/PostMarkdown';
 import PostContainerTemplate from 'components/template/post/PostContainerTemplate';
 import HomePostContainerTemplate from 'components/template/home/HomePostContainerTemplate';
-import { getWisataSlugs } from 'utils/getSlugs';
+import { getBlogSlugs, getWisataSlugs } from 'utils/getSlugs';
 import { useMemo } from 'react';
 
-export default function Home({ home, wisatas }) {
+export default function Home({ home, wisatas, blogs }) {
   const featuredWisatas = useMemo(() => {
     return wisatas.filter((wisata) => wisata?.meta?.featured);
   }, [wisatas]);
+
+  const featuredBlogs = useMemo(() => {
+    return blogs.filter((blog) => blog?.meta?.featured);
+  }, [blogs]);
 
   return (
     <DefaultLayout>
@@ -41,7 +45,7 @@ export default function Home({ home, wisatas }) {
         </div>
       </Container>
 
-      {/* Mengenal Kecamatan Batur */}
+      {/* Wisata */}
       <Container>
         <div className="my-16 flex flex-col">
           <HomePostContainerTemplate
@@ -52,6 +56,18 @@ export default function Home({ home, wisatas }) {
           ></HomePostContainerTemplate>
         </div>
       </Container>
+
+      {/* Blog */}
+      <Container>
+        <div className="my-16 flex flex-col">
+          <HomePostContainerTemplate
+            title="Blog"
+            linkText="Lihat semua blog &rarr;"
+            linkUrl="/blog"
+            contents={featuredBlogs}
+          ></HomePostContainerTemplate>
+        </div>
+      </Container>
     </DefaultLayout>
   );
 }
@@ -59,13 +75,17 @@ export default function Home({ home, wisatas }) {
 export async function getStaticProps({ params }) {
   const home = getHomeData();
 
-  const slugs = getWisataSlugs();
-  const wisatas = slugs.map((slug) => getWisataData(slug));
+  const wisataSlugs = getWisataSlugs();
+  const wisatas = wisataSlugs.map((slug) => getWisataData(slug));
+
+  const blogSlugs = getBlogSlugs();
+  const blogs = blogSlugs.map((slug) => getBlogData(slug));
 
   return {
     props: {
       home: home,
       wisatas: wisatas,
+      blogs: blogs,
     },
   };
 }

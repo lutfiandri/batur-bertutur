@@ -74,6 +74,9 @@ collections:
       - label: Deskripsi
         name: desc
         widget: string
+      - label: Tampilkan di halaman utama
+        name: featured
+        widget: boolean
       - label: Gambar Thumbnail
         name: thumbnail
         widget: image

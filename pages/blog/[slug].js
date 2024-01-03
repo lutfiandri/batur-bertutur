@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 import { getBlogData } from 'utils/getMarkdownData';
 import { getBlogSlugs } from 'utils/getSlugs';
+import { useMemo } from 'react';
 
 function ReadBlog({ blog }) {
   const formattedDate = useMemo(() => {
@@ -37,7 +38,7 @@ function ReadBlog({ blog }) {
         <div className="my-16 min-h-screen-no-header">
           <div className="mb-8 flex flex-col gap-2">
             <h1 className="text-3xl font-bold md:text-4xl">
-              {wisata?.meta?.title}
+              {blog?.meta?.title}
             </h1>
             <div className="text-sm text-gray lg:text-base">
               Ditulis pada {formattedDate}
@@ -55,6 +56,8 @@ export default ReadBlog;
 
 export async function getStaticPaths() {
   const slugs = getBlogSlugs();
+
+  console.log('slugs', slugs);
 
   const paths = slugs.map((slug) => ({
     params: { slug: slug },

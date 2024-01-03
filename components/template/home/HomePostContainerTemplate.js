@@ -34,7 +34,7 @@ function HomePostContainerTemplate({
             <PostPreviewCard
               key={wisata.meta.slug}
               meta={wisata.meta}
-              baseUrl="wisata"
+              baseUrl={linkUrl}
             />
           ))}
         </Masonry>
