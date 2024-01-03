@@ -3,10 +3,12 @@ title: Sumur Jalatunda
 desc: Sumur Jalatunda adalah salah satu peninggalan sejarah yang memiliki makna
   dan keindahan tersendiri. Terletak di kompleks candi Jalatunda, Trowulan, Jawa
   Timur, sumur ini menjadi saksi bisu perjalanan sejarah Majapahit.
+featured: true
 thumbnail: /uploads/kawah-sikidang-1.jpg
 date: 2023-12-28T14:09:41.170Z
 tags: Sumur, Pekasiran
 ---
+
 Sumur Jalatunda adalah salah satu peninggalan sejarah yang memiliki makna dan keindahan tersendiri. Terletak di kompleks candi Jalatunda, Trowulan, Jawa Timur, sumur ini menjadi saksi bisu perjalanan sejarah Majapahit, sebuah kerajaan besar di Indonesia pada masa lampau. Sumur ini memiliki keunikan dengan bentuknya yang berundak-undak dan ukiran relief yang menghiasi dindingnya. Para arkeolog percaya bahwa sumur ini memiliki peran penting dalam kegiatan keagamaan dan upacara adat masyarakat Majapahit.
 
 Sumur Jalatunda juga dikaitkan dengan legenda yang melekat erat dalam budaya Jawa. Salah satu legenda yang terkenal adalah kisah Candra Kirana dan Raden Inu Kertapati yang saling jatuh cinta. Sumur ini diyakini sebagai tempat pertemuan mereka, dan cerita ini menjadi bagian dari warisan budaya yang diwariskan secara turun temurun. Pengunjung seringkali datang ke Sumur Jalatunda tidak hanya untuk menikmati keindahan arsitekturnya, tetapi juga untuk merasakan aura magis dan romantika dari legenda yang melekat padanya.

@@ -8,23 +8,17 @@ import PostMarkdown from 'components/template/post/PostMarkdown';
 import PostContainerTemplate from 'components/template/post/PostContainerTemplate';
 import HomePostContainerTemplate from 'components/template/home/HomePostContainerTemplate';
 import { getWisataSlugs } from 'utils/getSlugs';
+import { useMemo } from 'react';
 
 export default function Home({ home, wisatas }) {
-  console.log('home', home);
+  const featuredWisatas = useMemo(() => {
+    return wisatas.filter((wisata) => wisata?.meta?.featured);
+  }, [wisatas]);
+
   return (
     <DefaultLayout>
       <Container>
         <div className="flex min-h-screen-no-header flex-col items-center justify-center md:flex-row md:justify-start">
-          {/* <div className="relative mr-0 h-[200px] w-[200px] overflow-hidden rounded-lg md:mr-8">
-            <Image
-              src="/images/lutfi-andriyanto.webp"
-              alt="Lutfi Andriyanto"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              priority
-            />
-          </div> */}
           <div className="flex flex-col space-y-1 pt-8 text-center md:mt-0 md:text-left">
             <div className="text-3xl font-bold ">Jelajah</div>
             <h1 className="text-4xl font-bold text-gray-dark dark:text-gray-light">
@@ -54,7 +48,7 @@ export default function Home({ home, wisatas }) {
             title="Wisata Batur"
             linkText="Lihat semua wisata &rarr;"
             linkUrl="/wisata"
-            contents={wisatas}
+            contents={featuredWisatas}
           ></HomePostContainerTemplate>
         </div>
       </Container>
