@@ -57,8 +57,6 @@ export default ReadBlog;
 export async function getStaticPaths() {
   const slugs = getBlogSlugs();
 
-  console.log('slugs', slugs);
-
   const paths = slugs.map((slug) => ({
     params: { slug: slug },
   }));
