@@ -6,8 +6,19 @@ import Image from 'next/image';
 
 import { getWisataData } from 'utils/getMarkdownData';
 import { getWisataSlugs } from 'utils/getSlugs';
+import { useMemo } from 'react';
 
 function ReadWisata({ wisata }) {
+  const formattedDate = useMemo(() => {
+    const date = new Date(wisata?.meta?.date);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    const formatter = new Intl.DateTimeFormat('id-ID', options);
+    const formatted = formatter.format(date);
+
+    return formatted;
+  }, [wisata]);
+
   return (
     <DefaultLayout title={wisata?.meta?.title + ' - Batur Bertutur'}>
       <RenderIf when={wisata?.meta?.thumbnail}>
@@ -25,9 +36,14 @@ function ReadWisata({ wisata }) {
 
       <Container>
         <div className="my-16 min-h-screen-no-header">
-          <h1 className="mb-8 text-3xl font-bold md:text-4xl">
-            {wisata?.meta?.title}
-          </h1>
+          <div className="mb-8 flex flex-col gap-2">
+            <h1 className="text-3xl font-bold md:text-4xl">
+              {wisata?.meta?.title}
+            </h1>
+            <div className="text-sm text-gray lg:text-base">
+              Ditulis pada {formattedDate}
+            </div>
+          </div>
 
           <PostMarkdown>{wisata?.body}</PostMarkdown>
         </div>
