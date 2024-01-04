@@ -7,6 +7,13 @@ featured: true
 thumbnail: /uploads/kawah-sikidang-1.jpg
 date: 2023-12-28T14:09:41.170Z
 tags: Sumur, Pekasiran
+location: -7.197176245810772, 109.85194346905327
+googleMapsUrl: https://maps.app.goo.gl/pfrb8sR4y9hSAttw7
+facilities: Toilet, Warung Jajan, Musholla
+gallery:
+  - image: /uploads/1682626756.jpg
+  - image: /uploads/gas-co2-dieng.jpg
+  - image: /uploads/kawah-sikidang-1.jpg
 ---
 
 Sumur Jalatunda adalah salah satu peninggalan sejarah yang memiliki makna dan keindahan tersendiri. Terletak di kompleks candi Jalatunda, Trowulan, Jawa Timur, sumur ini menjadi saksi bisu perjalanan sejarah Majapahit, sebuah kerajaan besar di Indonesia pada masa lampau. Sumur ini memiliki keunikan dengan bentuknya yang berundak-undak dan ukiran relief yang menghiasi dindingnya. Para arkeolog percaya bahwa sumur ini memiliki peran penting dalam kegiatan keagamaan dan upacara adat masyarakat Majapahit.
