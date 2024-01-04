@@ -10,7 +10,7 @@ function DefaultLayout({ children, title = 'Batur Bertutur', noFooter }) {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main className="relative">{children}</main>
       <RenderIf when={!noFooter}>
         <Footer />
       </RenderIf>

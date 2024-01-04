@@ -8,23 +8,23 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper';
 
-function Carousel({ imageSrcs = [] }) {
+function Carousel({ imageSrcs = [], gap = 30, delay = 2000 }) {
   return (
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={gap}
         loop={true}
         pagination={{
           clickable: true,
         }}
         autoplay={{
-          delay: 2000,
+          delay: delay,
           disableOnInteraction: false,
         }}
         grabCursor={true}
         modules={[Autoplay, Pagination]}
-        className="my-4 aspect-video rounded-lg"
+        className="aspect-video"
       >
         {imageSrcs.map((src) => (
           <SwiperSlide key={src}>
