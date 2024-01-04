@@ -8,6 +8,7 @@ function DefaultLayout({ children, title = 'Batur Bertutur', noFooter }) {
     <>
       <Head>
         <title>{title}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
       <Navbar />
       <main className="relative">{children}</main>

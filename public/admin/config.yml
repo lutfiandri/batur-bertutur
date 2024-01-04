@@ -51,9 +51,32 @@ collections:
         name: tags
         widget: string
         hint: 'Contoh: KKN-PPM UGM, Wisata'
+      - label: Lokasi (latitude, longitude)
+        name: location
+        widget: string
+        hint: 'Bisa didapatkan dari google maps'
       - label: Isi Halaman
         name: body
         widget: markdown
+      - label: Link Google Maps
+        name: googleMapsUrl
+        widget: string
+      - label: Link Instagram
+        name: instagramUrl
+        widget: string
+        required: false
+      - label: Fasilitas (pisahkan dengan koma)
+        name: facilities
+        widget: string
+        required: false
+        hint: 'Contoh: Toilet, Warung Jajan, Musholla'
+      - label: Galeri
+        name: gallery
+        widget: list
+        fields:
+          - label: Gambar
+            name: image
+            widget: image
       - label: Files
         name: files
         widget: list
