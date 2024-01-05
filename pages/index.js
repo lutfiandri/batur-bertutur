@@ -9,6 +9,7 @@ import PostContainerTemplate from 'components/template/post/PostContainerTemplat
 import HomePostContainerTemplate from 'components/template/home/HomePostContainerTemplate';
 import { getBlogSlugs, getWisataSlugs } from 'utils/getSlugs';
 import { useMemo } from 'react';
+import Marquee from 'react-fast-marquee';
 
 export default function Home({ home, wisatas, blogs }) {
   const featuredWisatas = useMemo(() => {
@@ -34,6 +35,51 @@ export default function Home({ home, wisatas, blogs }) {
           </div>
         </div>
       </Container>
+
+      {/* gallery */}
+      <div className="my-32 flex flex-col gap-2">
+        <Marquee autoFill speed={100}>
+          {home?.meta?.gallery?.map((image) => (
+            <div key={image.image} className="mx-2">
+              <Image
+                src={image.image}
+                alt={image.image}
+                className="origin-center rounded-lg object-cover"
+                width={280}
+                height={180}
+              />
+            </div>
+          ))}
+        </Marquee>
+
+        <Marquee autoFill speed={100} delay={-1}>
+          {home?.meta?.gallery?.map((image) => (
+            <div key={image.image} className="mx-2">
+              <Image
+                src={image.image}
+                alt={image.image}
+                className="origin-center rounded-lg object-cover"
+                width={280}
+                height={180}
+              />
+            </div>
+          ))}
+        </Marquee>
+
+        <Marquee autoFill speed={100} delay={-2}>
+          {home?.meta?.gallery?.map((image) => (
+            <div key={image.image} className="mx-2">
+              <Image
+                src={image.image}
+                alt={image.image}
+                className="origin-center rounded-lg object-cover"
+                width={280}
+                height={180}
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
 
       {/* Mengenal Kecamatan Batur */}
       <Container>
