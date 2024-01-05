@@ -1,12 +1,29 @@
 import Carousel from 'components/element/Carousel';
-import { TbBrandGoogleMaps, TbBrandInstagram, TbId } from 'react-icons/tb';
+import {
+  TbBrandGoogleMaps,
+  TbBrandInstagram,
+  TbId,
+  TbShare3,
+} from 'react-icons/tb';
 import MapModalButton from './MapModalButton';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
+import { useRouter } from 'next/router';
 
 function MapModalContent({ wisata }) {
+  const router = useRouter();
+
   const facilities = useMemo(() => {
     return wisata?.meta?.facilities?.split(',').map((f) => f.trim());
   }, [wisata]);
+
+  const copyToClipboardHandler = async () => {
+    try {
+      const url = window?.location?.href;
+      await navigator.clipboard.writeText(url);
+    } catch (err) {
+      console.error('Unable to copy text to clipboard', err);
+    }
+  };
 
   return (
     <div className="pointer-events-auto h-full w-full overflow-auto rounded-lg bg-white shadow-lg">
@@ -44,6 +61,13 @@ function MapModalContent({ wisata }) {
             url={'/wisata/' + wisata?.meta?.slug}
             text="Baca detail informasi"
             icon={<TbId className="h-6 w-6" />}
+          />
+
+          <MapModalButton
+            onClick={copyToClipboardHandler}
+            className="pointer-events-none cursor-pointer"
+            text="Bagikan"
+            icon={<TbShare3 className="h-6 w-6" />}
           />
         </div>
 
