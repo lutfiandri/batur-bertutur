@@ -11,7 +11,7 @@ function DefaultLayout({ children, title = 'Batur Bertutur', noFooter }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
       <Navbar />
-      <main className="relative">{children}</main>
+      <main className="relative min-h-screen-no-header">{children}</main>
       <RenderIf when={!noFooter}>
         <Footer />
       </RenderIf>

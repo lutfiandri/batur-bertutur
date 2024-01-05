@@ -3,6 +3,7 @@ import {
   Marker,
   Popup,
   TileLayer,
+  ZoomControl,
   useMapEvents,
 } from 'react-leaflet';
 import L from 'leaflet';
@@ -46,7 +47,9 @@ function Map({ wisatas = [], activeWisata }) {
         center={centerOfMap}
         zoom={13}
         scrollWheelZoom={true}
+        zoomControl={false}
       >
+        <ZoomControl position="bottomright" />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -32,14 +32,9 @@ function PetaWisata({ wisatas = [] }) {
     setActiveWisata(selectedWisata);
   }, [router, wisatas]);
 
-  useEffect(() => {
-    console.log('active wisata', activeWisata);
-  }, [activeWisata]);
-
   return (
     <DefaultLayout noFooter>
       <Map wisatas={wisatas} activeWisata={activeWisata} />
-      {/* {activeWisata?.meta?.slug ? <MapModal wisata={activeWisata} /> : null} */}
       <MapModal wisata={activeWisata} />
     </DefaultLayout>
   );
