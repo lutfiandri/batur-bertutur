@@ -19,7 +19,7 @@ function MapModal({ wisata }) {
     <div
       className={clsx(
         'pointer-events-none absolute top-0 left-0 isolate z-10 h-full w-full p-2 transition-all duration-500 ease-in-out md:w-[450px] md:p-4',
-        isActive ? 'left-0' : 'left-[-500px]'
+        isActive ? 'left-0' : 'left-[-100%] md:left-[-500px]'
       )}
     >
       <MapModalContent wisata={wisata} />

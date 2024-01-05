@@ -2,7 +2,7 @@ import DefaultLayout from 'components/layout/DefaultLayout';
 import MapModal from 'components/template/map/MapModal';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { getWisataData } from 'utils/getMarkdownData';
 import { getWisataSlugs } from 'utils/getSlugs';
 
@@ -14,6 +14,16 @@ function PetaWisata({ wisatas = [] }) {
   const [activeWisata, setActiveWisata] = useState({});
 
   const router = useRouter();
+
+  const isActive = useMemo(() => {
+    return activeWisata?.meta?.slug != undefined;
+  }, [activeWisata]);
+
+  const title = useMemo(() => {
+    const base = 'Batur Bertutur';
+    const active = isActive ? 'Peta ' + activeWisata?.meta?.title + ' - ' : '';
+    return active + base;
+  }, [activeWisata, isActive]);
 
   useEffect(() => {
     if (!router) return;
@@ -33,7 +43,7 @@ function PetaWisata({ wisatas = [] }) {
   }, [router, wisatas]);
 
   return (
-    <DefaultLayout noFooter>
+    <DefaultLayout noFooter title={title}>
       <Map wisatas={wisatas} activeWisata={activeWisata} />
       <MapModal wisata={activeWisata} />
     </DefaultLayout>
