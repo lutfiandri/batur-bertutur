@@ -1,6 +1,9 @@
+# backend:
+#   name: github
+#   repo: lutfiandri/batur-bertutur
+#   branch: main
 backend:
-  name: github
-  repo: lutfiandri/batur-bertutur
+  name: git-gateway
   branch: main
 media_folder: /public/uploads
 public_folder: /uploads
