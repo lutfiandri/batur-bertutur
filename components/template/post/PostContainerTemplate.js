@@ -7,6 +7,7 @@ const Masonry = dynamic(() => import('react-smart-masonry'), { ssr: false });
 function PostContainerTemplate({
   title = 'Title',
   subtitle = 'Subtitle',
+  baseUrl = '/wisata',
   contents = [],
 }) {
   const [search, setSearch] = useState('');
@@ -64,7 +65,7 @@ function PostContainerTemplate({
             <PostPreviewCard
               key={wisata.meta.slug}
               meta={wisata.meta}
-              baseUrl="wisata"
+              baseUrl={baseUrl}
             />
           ))}
         </Masonry>

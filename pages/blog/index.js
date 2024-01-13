@@ -10,7 +10,12 @@ function Blog({ blogs }) {
     <DefaultLayout title="Blog - Batur Bertutur">
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
-          <PostsTemplate title="Blog Batur" subtitle="blog" contents={blogs} />
+          <PostsTemplate
+            title="Blog Batur"
+            subtitle="blog"
+            contents={blogs}
+            baseUrl="/blog"
+          />
         </div>
       </Container>
     </DefaultLayout>

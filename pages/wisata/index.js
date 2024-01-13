@@ -14,6 +14,7 @@ function Wisata({ wisatas }) {
             title="Wisata Batur"
             subtitle="wisata"
             contents={wisatas}
+            baseUrl="/wisata"
           />
         </div>
       </Container>
