@@ -7,8 +7,11 @@ import Image from 'next/image';
 import { getBlogData } from 'utils/getMarkdownData';
 import { getBlogSlugs } from 'utils/getSlugs';
 import { useMemo } from 'react';
+import { useRouter } from 'next/router';
 
 function ReadBlog({ blog }) {
+  const router = useRouter();
+
   const formattedDate = useMemo(() => {
     const date = new Date(blog?.meta?.date);
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -18,6 +21,10 @@ function ReadBlog({ blog }) {
 
     return formatted;
   }, [blog]);
+
+  const onBackHandler = () => {
+    router.back();
+  };
 
   return (
     <DefaultLayout title={blog?.meta?.title + ' - Batur Bertutur'}>
@@ -40,8 +47,15 @@ function ReadBlog({ blog }) {
             <h1 className="text-3xl font-bold md:text-4xl">
               {blog?.meta?.title}
             </h1>
-            <div className="text-sm text-gray lg:text-base">
-              Ditulis pada {formattedDate}
+            <div className="flex gap-2 text-sm text-gray lg:text-base">
+              <button
+                className="transition-all duration-150 hover:text-black"
+                onClick={onBackHandler}
+              >
+                &larr; Kembali
+              </button>{' '}
+              <span>-</span>
+              <span>Ditulis pada {formattedDate}</span>
             </div>
           </div>
 
