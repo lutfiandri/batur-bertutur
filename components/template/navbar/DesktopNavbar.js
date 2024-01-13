@@ -35,7 +35,7 @@ function DesktopNavbar({ show = false }) {
                     role="button"
                     className={clsx(
                       'm-1 py-4 px-3',
-                      router?.pathname === route.url
+                      router?.pathname?.startsWith(route.url)
                         ? 'font-bold'
                         : 'font-semibold'
                     )}
