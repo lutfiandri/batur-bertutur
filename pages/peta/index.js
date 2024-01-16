@@ -21,7 +21,9 @@ function PetaWisata({ wisatas = [] }) {
 
   const title = useMemo(() => {
     const base = 'Batur Bertutur';
-    const active = isActive ? 'Peta ' + activeWisata?.meta?.title + ' - ' : '';
+    const active = isActive
+      ? 'Peta ' + activeWisata?.meta?.title + ' - '
+      : 'Peta Wisata - ';
     return active + base;
   }, [activeWisata, isActive]);
 
@@ -43,7 +45,13 @@ function PetaWisata({ wisatas = [] }) {
   }, [router, wisatas]);
 
   return (
-    <DefaultLayout noFooter title={title}>
+    <DefaultLayout
+      noFooter
+      title={title}
+      description="Temukan wisata di Dieng, Kecamatan Batur, Banjarnegara, Jawa Tengah"
+      pageUrl={process.env.NEXT_PUBLIC_BASEURL + '/peta'}
+      keywords="Peta, Map, Maps"
+    >
       <Map wisatas={wisatas} activeWisata={activeWisata} />
       <MapModal wisata={activeWisata} />
     </DefaultLayout>

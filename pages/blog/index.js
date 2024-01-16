@@ -7,7 +7,12 @@ import { getBlogSlugs } from 'utils/getSlugs';
 
 function Blog({ blogs }) {
   return (
-    <DefaultLayout title="Blog - Batur Bertutur">
+    <DefaultLayout
+      title="Blog - Batur Bertutur"
+      description="Temukan blog seputar Kecamatan Batur, Banjarnegara, Jawa Tengah"
+      pageUrl={process.env.NEXT_PUBLIC_BASEURL + '/blog'}
+      keywords="Blog, Artikel"
+    >
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
           <PostsTemplate

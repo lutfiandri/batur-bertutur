@@ -27,7 +27,13 @@ function ReadBlog({ blog }) {
   };
 
   return (
-    <DefaultLayout title={blog?.meta?.title + ' - Batur Bertutur'}>
+    <DefaultLayout
+      title={blog?.meta?.title + ' - Batur Bertutur'}
+      description={blog?.meta?.desc}
+      pageUrl={process.env.NEXT_PUBLIC_BASEURL + '/blog/' + blog?.meta?.slug}
+      keywords={'Blog, Artikel, ' + blog?.meta?.tags}
+      imageCardUrl={blog?.meta?.thumbnail}
+    >
       <RenderIf when={blog?.meta?.thumbnail}>
         <div className="relative mb-4 aspect-[4/3] overflow-hidden object-center md:aspect-[16/9] lg:aspect-[2.39/1] 2xl:aspect-[4/1]">
           <Image

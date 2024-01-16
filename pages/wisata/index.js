@@ -7,7 +7,12 @@ import { getWisataSlugs } from 'utils/getSlugs';
 
 function Wisata({ wisatas }) {
   return (
-    <DefaultLayout title="Wisata - Batur Bertutur">
+    <DefaultLayout
+      title="Wisata - Batur Bertutur"
+      description="Temukan wisata di Dieng, Kecamatan Batur, Banjarnegara, Jawa Tengah"
+      pageUrl={process.env.NEXT_PUBLIC_BASEURL + '/wisata'}
+      keywords="Wisata"
+    >
       <Container>
         <div className="min-h-screen-no-header pt-12 pb-32">
           <PostsTemplate

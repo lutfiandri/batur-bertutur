@@ -27,7 +27,15 @@ function ReadWisata({ wisata }) {
   };
 
   return (
-    <DefaultLayout title={wisata?.meta?.title + ' - Batur Bertutur'}>
+    <DefaultLayout
+      title={wisata?.meta?.title + ' - Batur Bertutur'}
+      description={wisata?.meta?.desc}
+      pageUrl={
+        process.env.NEXT_PUBLIC_BASEURL + '/wisata/' + wisata?.meta?.slug
+      }
+      keywords={'Wisata, ' + wisata?.meta?.tags}
+      imageCardUrl={wisata?.meta?.thumbnail}
+    >
       <RenderIf when={wisata?.meta?.thumbnail}>
         <div className="relative mb-4 aspect-[4/3] overflow-hidden object-center md:aspect-[16/9] lg:aspect-[2.39/1] 2xl:aspect-[4/1]">
           <Image
