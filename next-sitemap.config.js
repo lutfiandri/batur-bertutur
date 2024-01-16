@@ -1,4 +1,4 @@
-const siteUrl = 'https://batur.id';
+const siteUrl = process.env.NEXT_PUBLIC_BASEURL;
 
 // add your private routes here
 const exclude = ['/admin*', '/uploads*', '/images*', '/img*', '/maps*'];

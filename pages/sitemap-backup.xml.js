@@ -3,7 +3,7 @@
 import { getBlogData, getWisataData } from 'utils/getMarkdownData';
 import { getBlogSlugs, getWisataSlugs } from 'utils/getSlugs';
 
-const BASEURL = 'https://batur.id';
+const BASEURL = process.env.NEXT_PUBLIC_BASEURL;
 
 function formatDateToISO(dateString) {
   const date = new Date(dateString);
@@ -19,25 +19,25 @@ function generateSiteMap(urls = []) {
   return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://batur.id</loc>
+        <loc>${BASEURL}</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
-        <loc>https://batur.id/wisata</loc>
+        <loc>${BASEURL}/wisata</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.99</priority>
       </url>
       <url>
-        <loc>https://batur.id/blog</loc>
+        <loc>${BASEURL}/blog</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.98</priority>
       </url>
       <url>
-        <loc>https://batur.id/peta</loc>
+        <loc>${BASEURL}/peta</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.97</priority>
@@ -71,8 +71,6 @@ export async function getServerSideProps({ res }) {
   const blogs = blogSlugs.map((slug) => getBlogData(slug));
 
   const urls = [];
-
-  console.log(wisatas);
 
   wisatas.forEach((wisata) => {
     urls.push({
