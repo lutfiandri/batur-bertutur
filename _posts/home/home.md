@@ -1,13 +1,15 @@
 ---
 title: Home
 gallery:
-  - image: /uploads/kawah-sikidang-1.jpg
-  - image: /uploads/1682626756.jpg
+  - image: /uploads/kawah-candradimka-gerbang.jpg
+  - image: /uploads/kawah-candradimuka-dari-atas.jpg
+  - image: /uploads/sumur-jalatunda-dari-atas.jpg
+  - image: /uploads/sumur-jalatunda-tangga.jpg
+  - image: /uploads/dringo-1.jpg
+  - image: /uploads/dringo-2.jpg
+  - image: /uploads/dringo-3.jpg
 ---
-
-<iframe src="https://www.youtube.com/embed/k-NFe5zUqZw?si=EwjwsTnpiCbbOvrp" 
-title="YouTube video player" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Zu9N-OIX9Qk?si=naIdMff0GjSErp6u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Kecamatan Batur, yang terletak di Kabupaten Banjarnegara, Jawa Tengah, menyajikan keindahan alam dan kekayaan budaya yang memikat. Dikelilingi oleh perbukitan yang hijau, kecamatan ini menawarkan panorama pegunungan yang memukau serta udara segar yang menyegarkan jiwa. Selain pesona alamnya, Batur juga menjadi tuan rumah bagi sejumlah situs bersejarah dan religius, termasuk kompleks Candi Arjuna yang menjadi bagian dari Candi Dieng. Kecamatan ini tidak hanya menjadi destinasi wisata yang menarik, tetapi juga menjaga kearifan lokal dan tradisi yang kuat, tercermin dalam kehidupan sehari-hari masyarakatnya.
 
