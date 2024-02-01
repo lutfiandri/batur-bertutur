@@ -24,7 +24,7 @@ Airnya yang hangat sangat tepat menjadi tujuan wisata di tengah dinginnya udara 
 
 D’Qiano Hot Spring Waterpark berada di Dusun Krajan, Desa Kepakisan, Kecamatan Batur. Lokasinya cukup jauh dari pusat Kota Banjarnegara dengan estimasi jarak tempuh sekitar 45 km. Karena lokasinya tepat berada di seberang Kawah Sileri, sumber air hangat yang digunakan untuk kolam D’Qiano Hot Spring Waterpark berasal dari air Kawah Sileri. Air tersebut kemudian difiltrasi sehingga menghasilkan air yang jernih dan tidak bau belerang. Kolam pemandian air hangat ini sering juga digunakan untuk terapi pengobatan oleh pengunjung.
 
-# **Harga Tiket Masuk**
+# Harga Tiket Masuk
 
 Untuk memasuki D’Qiano Hot Spring Waterpark dikenakan tiket masuk sebesar Rp20.000,- per orang. Namun untuk anak usia 4 tahun ke bawah tidak kenakan tiket masuk.
 
