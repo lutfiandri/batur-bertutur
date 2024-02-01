@@ -8,6 +8,7 @@ tags: Wisata, Pemandian Air Panas, Hot Spring, Waterpark, Kepakisan
 location: -7.194090981549415, 109.8806686791817
 googleMapsUrl: https://maps.app.goo.gl/RxgahnWhUHG1xV827
 instagramUrl: https://www.instagram.com/dqiano_dieng?igsh=MWs4aHV4cW91eWl1Zw==
+facilities: Mushola, Gazebo, Kantin, Toilet, Area Parkir
 gallery:
   - image: /uploads/qiano-4.jpg
   - image: /uploads/qiano-1.jpg
