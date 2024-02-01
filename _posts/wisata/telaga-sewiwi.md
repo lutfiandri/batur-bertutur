@@ -10,6 +10,7 @@ googleMapsUrl: https://maps.app.goo.gl/KVJQLQiu7AEC3kLr7
 facilities: Mushola, Toilet, Gazebo, Pemancingan, Sepeda Air
 gallery:
   - image: /uploads/sewiwi.jpg
+  - image: /uploads/sewiwi-1.jpg
 ---
 Telaga Sewiwi terletak di Desa Kepakisan, Kecamatan Batur, Kabupaten Banjarnegara, Jawa Tengah. Dari beberapa telaga yang ada di Dataran Tinggi Dieng, Telaga Sewiwi merupakan telaga yang paling mudah dijangkau wisatawan. Aksesibilitas menuju lokasi cukup terjangkau didukung dengan kondisi jalan yang cukup bagus. Perjalanan dapat ditempuh dari arah Karangkobar – Wanayasa maupun dari arah Kabupaten Batang menggunakan kendaraan roda dua maupun roda empat.
 
