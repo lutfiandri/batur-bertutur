@@ -4,7 +4,7 @@ desc: "Gunung Sipandu merupakan salah satu puncak di kawasan Dataran Tinggi
   Dieng yang memiliki ketinggian 2.241 mdpl dan cocok bagi pendaki pemula. "
 featured: true
 thumbnail: /uploads/whatsapp-image-2024-02-02-at-09.50.41_70ce88b2.jpg
-date: 2024-02-02T02:59:39.951Z
+date: 2024-01-23T02:59:00.000Z
 tags: Wisata, Gunung Sipandu, Karangtengah, Dieng, Banjarnegara
 location: -7.186690799994412, 109.89763336122195
 googleMapsUrl: "https://maps.app.goo.gl/6rMu9kacYSpn7opV7 "
