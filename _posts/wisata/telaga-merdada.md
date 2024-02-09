@@ -7,7 +7,7 @@ desc: Telaga Merdada merupakan telaga terluas di kawasan Dataran Tinggi Dieng
 featured: true
 thumbnail: /uploads/whatsapp-image-2024-02-01-at-21.12.22_14d1b6ef.jpg
 date: 2024-01-23T03:54:00.000Z
-tags: Wisata, Gunung Sipandu, Karangtengah, Dieng, Banjarnegara
+tags: Wisata, Telaga Merdada, Dieng, Karangtengah, Banjarnegara
 location: -7.208630465930816, 109.89138193526871
 googleMapsUrl: https://maps.app.goo.gl/UgwFb61zayD4P3iF6
 instagramUrl: instagram.com/merdada_official
